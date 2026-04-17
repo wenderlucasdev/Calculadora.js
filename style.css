@@ -1,0 +1,181 @@
+/*Reset*/
+*{
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Aial', sans-serif;
+}
+
+
+
+/*Centralização*/
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-back);
+  transition: 0.3s;
+}
+
+
+
+/*Estilo do corpo*/
+.calculator {
+  background-color:var(--bg-body);
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 380px;
+  border: 1px solid black;
+
+}
+
+
+
+/*Estilo do visor*/
+#display {
+  width:100%;
+  height: 70px;
+  background-color:var(--bg-display);
+  border:none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #00FF00;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  outline:none;
+}
+
+
+
+/*Grade de botoes*/
+.buttons{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+
+
+/*Estilo dos botoes*/
+button {
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  background-color:#333;
+  color:#C0C0C0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s;
+  border: 1px solid black;
+}
+button:hover{
+  background-color: #808080;
+}
+button:active {
+    transform: translateY(2px);
+}
+
+
+
+/*Estilo do botão =*/
+.btn-equal{
+  grid-row: span 2;
+  height:100%;
+  color: white;
+  background-color: red;
+}
+.btn-equal:hover{
+  background-color: #FA8072;
+  box-shadow: 0 0 15px red;
+}
+
+
+
+/*Estilo do botão 0*/
+.btn-zero{
+  grid-column: span 2;
+  background-color:#696969;
+  color: white;
+}
+.btn-zero:hover{
+  background-color: #A9A9A9;
+}
+
+
+
+/*Estilo dos botões operadores*/
+.btn-operator{
+  background-color: #191970;
+}
+.btn-operator:hover{
+  background-color: #6495ED;
+}
+
+
+
+/*Estilo do botão C*/
+.btn-clear{
+  background-color: #696969;
+}
+.btn-clear:hover{
+  background-color: #A9A9A9;
+}
+
+
+/*Tema*/
+/*Dark*/
+:root{
+  --bg-body:#363636;
+  --bg-back:#363636;
+  --bg-display:#F0FFFF;
+}
+/*Light*/
+[data-theme="light"]{
+  --bg-body:#A9A9A9;
+  --bg-back:#D3D3D3;
+  --bg-display:black;
+}
+
+
+/*Botao do tema*/
+.theme{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  
+}
+#theme-toggle{
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#theme-toggle:hover{
+  filter: brightness(0.9);
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; text-shadow: 0 0 15px currentColor; }
+    100% { opacity: 0.8; }
+}
+
+#theme-icon {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+
+
+
+
+
