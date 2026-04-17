@@ -16,4 +16,4 @@ Calculadora funcional desenvolvida com HTML, CSS e JavaScript, apresentando um d
 
 ## Como visualizar
 Você pode acessar o projeto rodando o arquivo `index.html` ou através do link:
-https://github.com/wenderlucasdev/Calculadora.js/
+https://wenderlucasdev.github.io/Calculadora.js/
